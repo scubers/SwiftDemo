@@ -53,7 +53,7 @@ class ChildViewController: UIViewController {
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        print("\(self.name)will disappear")
+        print("\(self.name) will disappear")
     }
     
     override func viewDidDisappear(animated: Bool) {
