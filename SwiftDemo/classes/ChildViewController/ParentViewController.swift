@@ -43,9 +43,9 @@ class ParentViewController: UIViewController {
     }
     
     func setupSubviewAndController() {
-        let c1 = Child1ViewController()
-        let c2 = Child2ViewController()
-        let c3 = Child3ViewController()
+        let c1 = ChildViewController(name: "c1")
+        let c2 = ChildViewController(name: "c2")
+        let c3 = ChildViewController(name: "c3")
 //        let c1 = FirstDemoViewController()
 //        let c2 = SwiftKVOViewController()
 //        let c3 = CustomStatusBarController()

@@ -48,9 +48,6 @@
 		BD58F2701C32253D009DC269 /* BasicAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD58F26F1C32253D009DC269 /* BasicAnimation.swift */; };
 		BD5A7DBD1C2CF66900EA0569 /* QTTranslucentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A7DBC1C2CF66900EA0569 /* QTTranslucentViewController.swift */; };
 		BD5A7DC01C2D1F4900EA0569 /* ParentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A7DBF1C2D1F4900EA0569 /* ParentViewController.swift */; };
-		BD5A7DC21C2D1F7800EA0569 /* Child1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A7DC11C2D1F7800EA0569 /* Child1ViewController.swift */; };
-		BD5A7DC41C2D1F9D00EA0569 /* Child2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A7DC31C2D1F9D00EA0569 /* Child2ViewController.swift */; };
-		BD5A7DC61C2D2B8B00EA0569 /* Child3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5A7DC51C2D2B8B00EA0569 /* Child3ViewController.swift */; };
 		BD5DC4CC1C7ED1EA002C24AB /* WaterFloatAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DC4CB1C7ED1EA002C24AB /* WaterFloatAnimationViewController.swift */; };
 		BD6380411C23D4700059D20F /* StringDefineAsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6380401C23D4700059D20F /* StringDefineAsKey.swift */; };
 		BD65FFE81C21454B009189C2 /* CustomStatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FFE71C21454B009189C2 /* CustomStatusBarController.swift */; };
@@ -64,6 +61,7 @@
 		BD9E41BD1C22517E006090FE /* CustomStatusBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9E41BC1C22517E006090FE /* CustomStatusBar.swift */; };
 		BDA09E921C22575B00E8AD5E /* PublicMethod.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA09E911C22575B00E8AD5E /* PublicMethod.swift */; };
 		BDA09E951C22591C00E8AD5E /* NSDateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDA09E941C22591C00E8AD5E /* NSDateExtension.swift */; };
+		BDDD57CA1C8575AD00560B22 /* ChildViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BDDD57C91C8575AD00560B22 /* ChildViewController.swift */; };
 		BDFC63E61C27E83E0050EC4F /* MyMapAnnotation.m in Sources */ = {isa = PBXBuildFile; fileRef = BDFC63E51C27E83E0050EC4F /* MyMapAnnotation.m */; };
 /* End PBXBuildFile section */
 
@@ -134,9 +132,6 @@
 		BD58F26F1C32253D009DC269 /* BasicAnimation.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BasicAnimation.swift; sourceTree = "<group>"; };
 		BD5A7DBC1C2CF66900EA0569 /* QTTranslucentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = QTTranslucentViewController.swift; sourceTree = "<group>"; };
 		BD5A7DBF1C2D1F4900EA0569 /* ParentViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParentViewController.swift; sourceTree = "<group>"; };
-		BD5A7DC11C2D1F7800EA0569 /* Child1ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child1ViewController.swift; sourceTree = "<group>"; };
-		BD5A7DC31C2D1F9D00EA0569 /* Child2ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child2ViewController.swift; sourceTree = "<group>"; };
-		BD5A7DC51C2D2B8B00EA0569 /* Child3ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Child3ViewController.swift; sourceTree = "<group>"; };
 		BD5DC4CB1C7ED1EA002C24AB /* WaterFloatAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFloatAnimationViewController.swift; sourceTree = "<group>"; };
 		BD6380401C23D4700059D20F /* StringDefineAsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDefineAsKey.swift; sourceTree = "<group>"; };
 		BD65FFE71C21454B009189C2 /* CustomStatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStatusBarController.swift; sourceTree = "<group>"; };
@@ -150,6 +145,7 @@
 		BD9E41BC1C22517E006090FE /* CustomStatusBar.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStatusBar.swift; sourceTree = "<group>"; };
 		BDA09E911C22575B00E8AD5E /* PublicMethod.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PublicMethod.swift; sourceTree = "<group>"; };
 		BDA09E941C22591C00E8AD5E /* NSDateExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NSDateExtension.swift; sourceTree = "<group>"; };
+		BDDD57C91C8575AD00560B22 /* ChildViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChildViewController.swift; sourceTree = "<group>"; };
 		BDFC63E41C27E83E0050EC4F /* MyMapAnnotation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyMapAnnotation.h; sourceTree = "<group>"; };
 		BDFC63E51C27E83E0050EC4F /* MyMapAnnotation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyMapAnnotation.m; sourceTree = "<group>"; };
 		D9912DDDB3EBB3DB0C827E16 /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
@@ -359,9 +355,7 @@
 			isa = PBXGroup;
 			children = (
 				BD5A7DBF1C2D1F4900EA0569 /* ParentViewController.swift */,
-				BD5A7DC11C2D1F7800EA0569 /* Child1ViewController.swift */,
-				BD5A7DC31C2D1F9D00EA0569 /* Child2ViewController.swift */,
-				BD5A7DC51C2D2B8B00EA0569 /* Child3ViewController.swift */,
+				BDDD57C91C8575AD00560B22 /* ChildViewController.swift */,
 			);
 			path = ChildViewController;
 			sourceTree = "<group>";
@@ -625,7 +619,6 @@
 				3DA23AEB1C12C7B500DDF0E0 /* AppDelegate.swift in Sources */,
 				BD162A411C27CF13006AD42E /* BaiduMapDemoViewController.swift in Sources */,
 				BD96514C1C2A6C5000C3B6A5 /* CustomPush.swift in Sources */,
-				BD5A7DC41C2D1F9D00EA0569 /* Child2ViewController.swift in Sources */,
 				BD6AE87B1C2BA21D00D3A82E /* CustomTransitionAnimateGuide.swift in Sources */,
 				3DA0AC5C1C1EC76800D2E4C8 /* R.generated.swift in Sources */,
 				BD6AE8791C2B9E5500D3A82E /* CustomDismiss.swift in Sources */,
@@ -635,6 +628,7 @@
 				BDFC63E61C27E83E0050EC4F /* MyMapAnnotation.m in Sources */,
 				BD4F079F1C7D52B7006AB58C /* CoreImageViewController.swift in Sources */,
 				BD9E41BD1C22517E006090FE /* CustomStatusBar.swift in Sources */,
+				BDDD57CA1C8575AD00560B22 /* ChildViewController.swift in Sources */,
 				BDA09E921C22575B00E8AD5E /* PublicMethod.swift in Sources */,
 				BD6380411C23D4700059D20F /* StringDefineAsKey.swift in Sources */,
 				BD96514A1C2A6BDB00C3B6A5 /* TransferAnimationViewController.swift in Sources */,
@@ -644,8 +638,6 @@
 				3DA23B1B1C12C80200DDF0E0 /* FirstDemoViewController.swift in Sources */,
 				3DA23B1E1C12E8B600DDF0E0 /* SwiftKVOViewController.swift in Sources */,
 				BD58F26E1C322481009DC269 /* CoreAnimationViewController.swift in Sources */,
-				BD5A7DC21C2D1F7800EA0569 /* Child1ViewController.swift in Sources */,
-				BD5A7DC61C2D2B8B00EA0569 /* Child3ViewController.swift in Sources */,
 				BD4330761C4E623B00F22065 /* QTHeartAnimationController2.swift in Sources */,
 				BD96514E1C2A80EF00C3B6A5 /* CustomPop.swift in Sources */,
 			);
