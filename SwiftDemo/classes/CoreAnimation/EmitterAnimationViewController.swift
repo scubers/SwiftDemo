@@ -35,13 +35,13 @@ class EmitterAnimationViewController: UIViewController {
     func configureCellsForEmitter(emitter: CAEmitterLayer) {
         
         var images = [
-            R.image.p_ico_heart_b,
-            R.image.p_ico_heart_c,
-            R.image.p_ico_heart_g,
-            R.image.p_ico_heart_o,
-            R.image.p_ico_heart_p,
-            R.image.p_ico_heart_y,
-            R.image.p_ico_heart_purple,
+            UIImage(named: "p_ico_heart_b"),
+            UIImage(named: "p_ico_heart_c"),
+            UIImage(named: "p_ico_heart_g"),
+            UIImage(named: "p_ico_heart_o"),
+            UIImage(named: "p_ico_heart_p"),
+            UIImage(named: "p_ico_heart_y"),
+            UIImage(named: "p_ico_heart_purple"),
         ]
         
         var cells : [CAEmitterCell] = []

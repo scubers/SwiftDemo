@@ -13,14 +13,15 @@ class QTHeartAnimationController2: UIViewController {
     
     lazy var animationViews : [UIView] = [UIView]()
     
-    lazy var hearts : [UIImage] = [R.image.p_ico_heart_b!,
-                                    R.image.p_ico_heart_c!,
-                                    R.image.p_ico_heart_g!,
-                                    R.image.p_ico_heart_o!,
-                                    R.image.p_ico_heart_p!,
-                                    R.image.p_ico_heart_y!,
-                                    R.image.p_ico_heart_purple!];
-    
+    lazy var hearts = [
+                        UIImage(named: "p_ico_heart_b"),
+                        UIImage(named: "p_ico_heart_c"),
+                        UIImage(named: "p_ico_heart_g"),
+                        UIImage(named: "p_ico_heart_o"),
+                        UIImage(named: "p_ico_heart_p"),
+                        UIImage(named: "p_ico_heart_y"),
+                        UIImage(named: "p_ico_heart_purple"),
+                        ];
     override func viewDidLoad() {
         super.viewDidLoad()
         bgView.frame = view.bounds

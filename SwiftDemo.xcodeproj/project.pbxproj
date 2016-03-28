@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		27A083E72464BE5320722C5E /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4EBB18177C28391CD15CB02E /* Pods.framework */; };
 		3DA0AC541C1EA71300D2E4C8 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DA0AC531C1EA71300D2E4C8 /* icon.png */; };
-		3DA0AC5C1C1EC76800D2E4C8 /* R.generated.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA0AC5B1C1EC76800D2E4C8 /* R.generated.swift */; };
 		3DA23AEB1C12C7B500DDF0E0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA23AEA1C12C7B500DDF0E0 /* AppDelegate.swift */; };
 		3DA23AED1C12C7B500DDF0E0 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA23AEC1C12C7B500DDF0E0 /* ViewController.swift */; };
 		3DA23AF01C12C7B500DDF0E0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3DA23AEE1C12C7B500DDF0E0 /* Main.storyboard */; };
@@ -84,7 +83,6 @@
 
 /* Begin PBXFileReference section */
 		3DA0AC531C1EA71300D2E4C8 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
-		3DA0AC5B1C1EC76800D2E4C8 /* R.generated.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = R.generated.swift; sourceTree = SOURCE_ROOT; };
 		3DA23AE71C12C7B500DDF0E0 /* SwiftDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3DA23AEA1C12C7B500DDF0E0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3DA23AEC1C12C7B500DDF0E0 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -217,7 +215,6 @@
 				3DA23B181C12C80200DDF0E0 /* classes */,
 				3DA23AEA1C12C7B500DDF0E0 /* AppDelegate.swift */,
 				3DA23AEC1C12C7B500DDF0E0 /* ViewController.swift */,
-				3DA0AC5B1C1EC76800D2E4C8 /* R.generated.swift */,
 				3DA23AEE1C12C7B500DDF0E0 /* Main.storyboard */,
 				3DA23AF11C12C7B500DDF0E0 /* Assets.xcassets */,
 				3DA23AF31C12C7B500DDF0E0 /* LaunchScreen.storyboard */,
@@ -465,7 +462,7 @@
 				TargetAttributes = {
 					3DA23AE61C12C7B500DDF0E0 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = 8QL22JREKT;
+						DevelopmentTeam = FJ535WN7FW;
 					};
 					3DA23AFA1C12C7B500DDF0E0 = {
 						CreatedOnToolsVersion = 7.1;
@@ -569,7 +566,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"$PODS_ROOT/R.swift/rswift\" \"$SRCROOT\"";
+			shellScript = "";
 		};
 		76A2753D4A7046943A8B077D /* Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -620,7 +617,6 @@
 				BD162A411C27CF13006AD42E /* BaiduMapDemoViewController.swift in Sources */,
 				BD96514C1C2A6C5000C3B6A5 /* CustomPush.swift in Sources */,
 				BD6AE87B1C2BA21D00D3A82E /* CustomTransitionAnimateGuide.swift in Sources */,
-				3DA0AC5C1C1EC76800D2E4C8 /* R.generated.swift in Sources */,
 				BD6AE8791C2B9E5500D3A82E /* CustomDismiss.swift in Sources */,
 				BD58F2701C32253D009DC269 /* BasicAnimation.swift in Sources */,
 				BD4330741C4E239B00F22065 /* QTHeartAnimationViewController.swift in Sources */,
@@ -783,7 +779,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
@@ -802,7 +798,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_IDENTITY = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
 				EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO;
 				INFOPLIST_FILE = SwiftDemo/Info.plist;
