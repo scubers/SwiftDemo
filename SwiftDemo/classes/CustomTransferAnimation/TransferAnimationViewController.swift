@@ -19,13 +19,9 @@ class TransferAnimationViewController: UIViewController {
     
     static var i : Int = 0
     
-    
-    
     init() {
         super.init(nibName: nil, bundle: nil)
         view.backgroundColor = jr_randomColor()
-        self.transitioningDelegate = self
-
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -51,7 +47,7 @@ class TransferAnimationViewController: UIViewController {
             let button = UIButton(type: .ContactAdd)
             button.frame = CGRectMake(0, 100, 20, 20)
             self.view.addSubview(button)
-            button.addTarget(self, action: "click:", forControlEvents: .TouchUpInside)
+            button.addTarget(self, action: #selector(TransferAnimationViewController.click(_:)), forControlEvents: .TouchUpInside)
         }
 
         block {
@@ -60,7 +56,7 @@ class TransferAnimationViewController: UIViewController {
             presentButton.setTitle("present", forState: .Normal)
             self.view.addSubview(presentButton)
             presentButton.backgroundColor = jr_randomColor()
-            presentButton.addTarget(self, action: "present:", forControlEvents: .TouchUpInside)
+            presentButton.addTarget(self, action: #selector(TransferAnimationViewController.present(_:)), forControlEvents: .TouchUpInside)
         }
         
         block {
@@ -69,7 +65,7 @@ class TransferAnimationViewController: UIViewController {
             dismissButton.setTitle("dismiss", forState: .Normal)
             self.view.addSubview(dismissButton)
             dismissButton.backgroundColor = jr_randomColor()
-            dismissButton.addTarget(self, action: "dismiss:", forControlEvents: .TouchUpInside)
+            dismissButton.addTarget(self, action: #selector(TransferAnimationViewController.dismiss(_:)), forControlEvents: .TouchUpInside)
         }
         
         block {
@@ -77,8 +73,17 @@ class TransferAnimationViewController: UIViewController {
             self.slideView?.backgroundColor = jr_randomColor()
             self.view.addSubview(self.slideView!)
             self.slideView?.frame = CGRectMake(200, 0, self.view.frame.size.width - 200, self.view.frame.size.height)
-            let pan = UIPanGestureRecognizer(target: self, action: "slidePan:")
+            let pan = UIPanGestureRecognizer(target: self, action: #selector(TransferAnimationViewController.slidePan(_:)))
             self.slideView?.addGestureRecognizer(pan)
+        }
+        
+        block {
+            let btn = UIButton(frame: CGRectMake(0, 400, 100, 30))
+            btn.setTitle("lsdjkfljk", forState: .Normal)
+            self.view.addSubview(btn)
+            btn.bk_whenTapped({ [weak self] in
+                self?.presentViewController(TestCustViewController(), animated: true, completion: nil)
+            })
         }
     }
     
@@ -99,7 +104,7 @@ class TransferAnimationViewController: UIViewController {
         self.navigationController?.delegate = self
         
         if self.navigationController != nil {
-            let pan = UIPanGestureRecognizer(target: self, action: "pan:")
+            let pan = UIPanGestureRecognizer(target: self, action: #selector(TransferAnimationViewController.pan(_:)))
             self.backgroundView?.addGestureRecognizer(pan)
         }
         
@@ -135,35 +140,80 @@ class TransferAnimationViewController: UIViewController {
         
     }
     
+    var animator: BaseCustomPresentAndDismissAnimator?
+    
     func slidePan(reco:UIPanGestureRecognizer) {
         var progress = (reco.translationInView(reco.view!).y / reco.view!.bounds.height)
         progress = progress > 1 ? 1 : progress
         progress = progress < -1 ? -1 : progress
         
         print("\(progress)     \(self.tag)")
-        
-        switch (reco.state) {
+
+        switch reco.state {
         case .Began:
-            slidePanDriven = UIPercentDrivenInteractiveTransition()
+            let vc = TransferAnimationViewController()
+            animator = BaseCustomPresentAndDismissAnimator(interationEnable: true, type: progress > 0 ? .Present : .Dismiss, target: progress > 0 ? vc : self, animateBlock: { (animator: BaseCustomPresentAndDismissAnimator,transitionContext, type) in
+                print("\(type)")
+                if type == .Present {
+                    let fvc = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
+                    let tvc = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+                    
+                    let fv = fvc?.view
+                    let tv = tvc?.view
+                    
+                    let containerView = transitionContext.containerView()
+                    
+                    containerView?.addSubview(fv!)
+                    containerView?.addSubview(tv!)
+                    
+                    tv?.frame = transitionContext.finalFrameForViewController(tvc!)
+                    
+                    tv?.frame.origin.y -= (tv?.frame.size.height)!
+                    
+                    UIView.animateWithDuration(animator.transitionDuration(transitionContext), animations: { () -> Void in
+                        
+                        tv?.frame = transitionContext.finalFrameForViewController(tvc!)
+                        
+                    }) { (finished) -> Void in
+                        transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                        
+                    }
+                }
+                if type == .Dismiss {
+                    let fvc = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
+                    let tvc = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
+                    
+                    let fv = fvc?.view
+                    let tv = tvc?.view
+                    
+                    let containerView = transitionContext.containerView()
+                    
+                    containerView?.addSubview(fv!)
+                    containerView?.addSubview(tv!)
+                    
+                    UIView.animateWithDuration(animator.transitionDuration(transitionContext), animations: { () -> Void in
+                        fv?.frame.origin.y -= (fv?.frame.size.height)!
+                        
+                    }) { (finished) -> Void in
+                        transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+                    }
+                }
+            })
             if progress > 0 {
-                let vc = TransferAnimationViewController()
-                vc.transitioningDelegate = self
-                self.presentViewController(vc, animated: true, completion: nil)
+                presentViewController(animator!.viewController!, animated: true, completion: nil)
             } else {
-//                self.presentingViewController?.transitioningDelegate = self
-                self.transitioningDelegate = self
-                self.dismissViewControllerAnimated(true, completion: nil)
+                dismissViewControllerAnimated(true, completion: nil)
             }
         case .Changed:
-            self.slidePanDriven?.updateInteractiveTransition(abs(progress))
+            animator?.percentDriven.updateInteractiveTransition(abs(progress))
         case .Ended,.Cancelled:
             if progress > 0.2 || progress < 0 {
-                slidePanDriven?.finishInteractiveTransition()
+                animator?.percentDriven.finishInteractiveTransition()
             } else {
-                slidePanDriven?.cancelInteractiveTransition()
+                animator?.percentDriven.cancelInteractiveTransition()
             }
-            self.slidePanDriven = nil
-        default:break
+        default:
+            break
         }
     }
     
@@ -193,28 +243,5 @@ extension TransferAnimationViewController : UINavigationControllerDelegate {
         }
         
         return nil
-    }
-    
-    
-}
-
-
-
-// MARK: - dismiss 以及 present 需要完成的协议
-extension TransferAnimationViewController : UIViewControllerTransitioningDelegate  {
-    internal func interactionControllerForPresentation(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return slidePanDriven
-    }
-    
-    internal func interactionControllerForDismissal(animator: UIViewControllerAnimatedTransitioning) -> UIViewControllerInteractiveTransitioning? {
-        return slidePanDriven
-    }
-    
-    internal func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomPresent.shareInstance
-    }
-    
-    internal func animationControllerForDismissedController(dismissed: UIViewController) -> UIViewControllerAnimatedTransitioning? {
-        return CustomDismiss.shareInstance
     }
 }

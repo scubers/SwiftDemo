@@ -1,47 +1,50 @@
 //
-//  CustomDismiss.swift
+//  GaussAnimator.swift
 //  SwiftDemo
 //
-//  Created by Jren on 15/12/24.
-//  Copyright © 2015年 jr-wong. All rights reserved.
+//  Created by JMacMini on 16/5/16.
+//  Copyright © 2016年 jr-wong. All rights reserved.
 //
 
-import Foundation
+import UIKit
 
-
-class CustomDismiss : NSObject, UIViewControllerAnimatedTransitioning {
-    
-    override private init() {}
-    static let shareInstance = CustomDismiss()
+class GaussAnimator: NSObject, UIViewControllerAnimatedTransitioning {
 
     func transitionDuration(transitionContext: UIViewControllerContextTransitioning?) -> NSTimeInterval {
         return 0.25
     }
     
     func animateTransition(transitionContext: UIViewControllerContextTransitioning) {
+        
         let fvc = transitionContext.viewControllerForKey(UITransitionContextFromViewControllerKey)
         let tvc = transitionContext.viewControllerForKey(UITransitionContextToViewControllerKey)
         
-        let fv = fvc?.view
-        let tv = tvc?.view
+        let fromView = fvc?.view
+        let toView = tvc?.view
         
         let containerView = transitionContext.containerView()
         
-        containerView?.addSubview(fv!)
-        containerView?.addSubview(tv!)
+        containerView?.addSubview(toView!)
+        containerView?.addSubview(fromView!)
         
-        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: { () -> Void in            
-            fv?.frame.origin.y -= (fv?.frame.size.height)!
+        //        toView?.frame = transitionContext.finalFrameForViewController(tvc!)
+        toView?.transform = CGAffineTransformMakeScale(0.9, 0.9)
+        
+        UIView.animateWithDuration(self.transitionDuration(transitionContext), animations: { () -> Void in
             
-            }) { (finished) -> Void in
-                transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+            fromView?.transform = CGAffineTransformMakeScale(0.1, 0.1)
+            toView?.transform = CGAffineTransformIdentity
+            
+        }) { (finished: Bool) -> Void in
+            
+            transitionContext.completeTransition(!transitionContext.transitionWasCancelled())
+            
         }
-        
         
     }
 }
 
-extension CustomDismiss : UIViewControllerTransitioningDelegate {
+extension GaussAnimator : UIViewControllerTransitioningDelegate {
     func animationControllerForPresentedController(presented: UIViewController, presentingController presenting: UIViewController, sourceController source: UIViewController) -> UIViewControllerAnimatedTransitioning? {
         return nil
     }

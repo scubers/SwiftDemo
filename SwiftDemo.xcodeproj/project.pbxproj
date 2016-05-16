@@ -20,6 +20,11 @@
 		3DA23B1E1C12E8B600DDF0E0 /* SwiftKVOViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3DA23B1D1C12E8B600DDF0E0 /* SwiftKVOViewController.swift */; };
 		3DC64FA11C1FAFDB00E21FED /* btn_nv@3x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC64F9F1C1FAFDB00E21FED /* btn_nv@3x.png */; };
 		3DC64FA21C1FAFDB00E21FED /* btn_nv@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 3DC64FA01C1FAFDB00E21FED /* btn_nv@2x.png */; };
+		5A7497651CE97CC200B57CDA /* GaussAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7497641CE97CC200B57CDA /* GaussAnimator.swift */; };
+		5A7497671CE97F7600B57CDA /* BaseCustomPresentAndDismissAnimator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7497661CE97F7600B57CDA /* BaseCustomPresentAndDismissAnimator.swift */; };
+		5A7498351CE9AAD200B57CDA /* TestCustViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7498341CE9AAD200B57CDA /* TestCustViewController.swift */; };
+		5A7498381CE9AC9800B57CDA /* TTTViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5A7498361CE9AC9800B57CDA /* TTTViewController.swift */; };
+		5A7498391CE9AC9800B57CDA /* TTTViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 5A7498371CE9AC9800B57CDA /* TTTViewController.xib */; };
 		BD162A411C27CF13006AD42E /* BaiduMapDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD162A401C27CF13006AD42E /* BaiduMapDemoViewController.swift */; };
 		BD162A431C27D0D3006AD42E /* PuTongDiTuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD162A421C27D0D3006AD42E /* PuTongDiTuViewController.swift */; };
 		BD4264AC1C74630F00A1501C /* BounceLineViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD4264AB1C74630F00A1501C /* BounceLineViewController.swift */; };
@@ -50,8 +55,6 @@
 		BD5DC4CC1C7ED1EA002C24AB /* WaterFloatAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD5DC4CB1C7ED1EA002C24AB /* WaterFloatAnimationViewController.swift */; };
 		BD6380411C23D4700059D20F /* StringDefineAsKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6380401C23D4700059D20F /* StringDefineAsKey.swift */; };
 		BD65FFE81C21454B009189C2 /* CustomStatusBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD65FFE71C21454B009189C2 /* CustomStatusBarController.swift */; };
-		BD6AE8771C2B9E4E00D3A82E /* CustomPresent.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AE8761C2B9E4E00D3A82E /* CustomPresent.swift */; };
-		BD6AE8791C2B9E5500D3A82E /* CustomDismiss.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AE8781C2B9E5500D3A82E /* CustomDismiss.swift */; };
 		BD6AE87B1C2BA21D00D3A82E /* CustomTransitionAnimateGuide.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6AE87A1C2BA21D00D3A82E /* CustomTransitionAnimateGuide.swift */; };
 		BD6DF30A1C76F7320068B8FD /* EmitterAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD6DF3091C76F7320068B8FD /* EmitterAnimationViewController.swift */; };
 		BD96514A1C2A6BDB00C3B6A5 /* TransferAnimationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD9651491C2A6BDB00C3B6A5 /* TransferAnimationViewController.swift */; };
@@ -101,6 +104,14 @@
 		3DC64F9F1C1FAFDB00E21FED /* btn_nv@3x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_nv@3x.png"; sourceTree = "<group>"; };
 		3DC64FA01C1FAFDB00E21FED /* btn_nv@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "btn_nv@2x.png"; sourceTree = "<group>"; };
 		4EBB18177C28391CD15CB02E /* Pods.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5A7497641CE97CC200B57CDA /* GaussAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GaussAnimator.swift; sourceTree = "<group>"; };
+		5A7497661CE97F7600B57CDA /* BaseCustomPresentAndDismissAnimator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseCustomPresentAndDismissAnimator.swift; sourceTree = "<group>"; };
+		5A7497AB1CE9829100B57CDA /* SwiftDemo copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SwiftDemo copy-Info.plist"; path = "/Users/jmacmini/Documents/SwiftDemo/SwiftDemo copy-Info.plist"; sourceTree = "<absolute>"; };
+		5A7497EF1CE9831F00B57CDA /* SwiftDemo-dev copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SwiftDemo-dev copy-Info.plist"; path = "/Users/jmacmini/Documents/SwiftDemo/SwiftDemo-dev copy-Info.plist"; sourceTree = "<absolute>"; };
+		5A7498331CE9832A00B57CDA /* SwiftDemo-dev2 copy-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = "SwiftDemo-dev2 copy-Info.plist"; path = "/Users/jmacmini/Documents/SwiftDemo/SwiftDemo-dev2 copy-Info.plist"; sourceTree = "<absolute>"; };
+		5A7498341CE9AAD200B57CDA /* TestCustViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestCustViewController.swift; sourceTree = "<group>"; };
+		5A7498361CE9AC9800B57CDA /* TTTViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TTTViewController.swift; sourceTree = "<group>"; };
+		5A7498371CE9AC9800B57CDA /* TTTViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TTTViewController.xib; sourceTree = "<group>"; };
 		B2BFA0C00D55F7C787808451 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
 		BD162A3A1C27CE74006AD42E /* SwiftDemo-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SwiftDemo-Bridging-Header.h"; sourceTree = "<group>"; };
 		BD162A401C27CF13006AD42E /* BaiduMapDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaiduMapDemoViewController.swift; sourceTree = "<group>"; };
@@ -133,8 +144,6 @@
 		BD5DC4CB1C7ED1EA002C24AB /* WaterFloatAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WaterFloatAnimationViewController.swift; sourceTree = "<group>"; };
 		BD6380401C23D4700059D20F /* StringDefineAsKey.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StringDefineAsKey.swift; sourceTree = "<group>"; };
 		BD65FFE71C21454B009189C2 /* CustomStatusBarController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomStatusBarController.swift; sourceTree = "<group>"; };
-		BD6AE8761C2B9E4E00D3A82E /* CustomPresent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomPresent.swift; sourceTree = "<group>"; };
-		BD6AE8781C2B9E5500D3A82E /* CustomDismiss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomDismiss.swift; sourceTree = "<group>"; };
 		BD6AE87A1C2BA21D00D3A82E /* CustomTransitionAnimateGuide.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTransitionAnimateGuide.swift; sourceTree = "<group>"; };
 		BD6DF3091C76F7320068B8FD /* EmitterAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = EmitterAnimationViewController.swift; sourceTree = "<group>"; };
 		BD9651491C2A6BDB00C3B6A5 /* TransferAnimationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransferAnimationViewController.swift; sourceTree = "<group>"; };
@@ -195,6 +204,9 @@
 				3DA23AE81C12C7B500DDF0E0 /* Products */,
 				5EC5773C0267CDC1AAF12DE0 /* Pods */,
 				5A448C263FCD3171F778F751 /* Frameworks */,
+				5A7497AB1CE9829100B57CDA /* SwiftDemo copy-Info.plist */,
+				5A7497EF1CE9831F00B57CDA /* SwiftDemo-dev copy-Info.plist */,
+				5A7498331CE9832A00B57CDA /* SwiftDemo-dev2 copy-Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -372,10 +384,13 @@
 				BD9651491C2A6BDB00C3B6A5 /* TransferAnimationViewController.swift */,
 				BD96514B1C2A6C5000C3B6A5 /* CustomPush.swift */,
 				BD96514D1C2A80EF00C3B6A5 /* CustomPop.swift */,
-				BD6AE8761C2B9E4E00D3A82E /* CustomPresent.swift */,
-				BD6AE8781C2B9E5500D3A82E /* CustomDismiss.swift */,
 				BD6AE87A1C2BA21D00D3A82E /* CustomTransitionAnimateGuide.swift */,
 				BD5A7DBC1C2CF66900EA0569 /* QTTranslucentViewController.swift */,
+				5A7497641CE97CC200B57CDA /* GaussAnimator.swift */,
+				5A7497661CE97F7600B57CDA /* BaseCustomPresentAndDismissAnimator.swift */,
+				5A7498341CE9AAD200B57CDA /* TestCustViewController.swift */,
+				5A7498361CE9AC9800B57CDA /* TTTViewController.swift */,
+				5A7498371CE9AC9800B57CDA /* TTTViewController.xib */,
 			);
 			path = CustomTransferAnimation;
 			sourceTree = "<group>";
@@ -520,6 +535,7 @@
 				3DA23AF01C12C7B500DDF0E0 /* Main.storyboard in Resources */,
 				BD4AA94A1C4F21AC00F54E94 /* p_ico_heart_p@3x.png in Resources */,
 				3DC64FA21C1FAFDB00E21FED /* btn_nv@2x.png in Resources */,
+				5A7498391CE9AC9800B57CDA /* TTTViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -606,7 +622,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				BD5A7DBD1C2CF66900EA0569 /* QTTranslucentViewController.swift in Sources */,
-				BD6AE8771C2B9E4E00D3A82E /* CustomPresent.swift in Sources */,
+				5A7497671CE97F7600B57CDA /* BaseCustomPresentAndDismissAnimator.swift in Sources */,
 				BD43B1061C23981A00E3AD68 /* UIViewExtension.swift in Sources */,
 				BD162A431C27D0D3006AD42E /* PuTongDiTuViewController.swift in Sources */,
 				BD5DC4CC1C7ED1EA002C24AB /* WaterFloatAnimationViewController.swift in Sources */,
@@ -617,7 +633,7 @@
 				BD162A411C27CF13006AD42E /* BaiduMapDemoViewController.swift in Sources */,
 				BD96514C1C2A6C5000C3B6A5 /* CustomPush.swift in Sources */,
 				BD6AE87B1C2BA21D00D3A82E /* CustomTransitionAnimateGuide.swift in Sources */,
-				BD6AE8791C2B9E5500D3A82E /* CustomDismiss.swift in Sources */,
+				5A7497651CE97CC200B57CDA /* GaussAnimator.swift in Sources */,
 				BD58F2701C32253D009DC269 /* BasicAnimation.swift in Sources */,
 				BD4330741C4E239B00F22065 /* QTHeartAnimationViewController.swift in Sources */,
 				BD4F4D331C756141007B02C3 /* LoadingAnimationViewController.swift in Sources */,
@@ -626,7 +642,9 @@
 				BD9E41BD1C22517E006090FE /* CustomStatusBar.swift in Sources */,
 				BDDD57CA1C8575AD00560B22 /* ChildViewController.swift in Sources */,
 				BDA09E921C22575B00E8AD5E /* PublicMethod.swift in Sources */,
+				5A7498351CE9AAD200B57CDA /* TestCustViewController.swift in Sources */,
 				BD6380411C23D4700059D20F /* StringDefineAsKey.swift in Sources */,
+				5A7498381CE9AC9800B57CDA /* TTTViewController.swift in Sources */,
 				BD96514A1C2A6BDB00C3B6A5 /* TransferAnimationViewController.swift in Sources */,
 				BDA09E951C22591C00E8AD5E /* NSDateExtension.swift in Sources */,
 				BD4264AC1C74630F00A1501C /* BounceLineViewController.swift in Sources */,
